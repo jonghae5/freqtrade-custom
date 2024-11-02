@@ -1,0 +1,75 @@
+
+{
+    "$schema": "https://schema.freqtrade.io/schema.json",
+    "max_open_trades": 3,
+    "stake_currency": "KRW",
+    "stake_amount": 40000,
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "KRW",
+    "dry_run": false,
+    "dry_run_wallet": 1000,
+    "cancel_open_orders_on_exit": false,
+    "trading_mode": "spot",
+    "margin_mode": "",
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 10,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing":{
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "upbit",
+        "key": "<ADD KEY>",
+        "secret": "<ADD SECRET>",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": [
+            "BTC/KRW","ETH/KRW"
+        ],
+        "pair_blacklist": [
+        ]
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "telegram": {
+        "enabled": true,
+        "token": "<ADD TOKEN>",
+        "chat_id": "5730623681"
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "127.0.0.1",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "745e1332173bd7e35fb9a02308fa55a237769bde1aa319483f56f67e2e019984",
+        "ws_token": "PG_ufsS1G2uJ-l2EJXKaHUlp4NNT9q0Gvw",
+        "CORS_origins": [],
+        "username": "freqtrader",
+        "password": "freqtrader"
+    },
+    "bot_name": "freqtrade",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}
