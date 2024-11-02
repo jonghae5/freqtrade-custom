@@ -1969,6 +1969,7 @@ class Exchange:
         Get rate from ticker.
         """
         ticker_rate = ticker[price_side]
+        # 업비트 지원
         if not ticker_rate:
             ticker_rate = float(ticker["info"]["trade_price"])  # type: ignore
         if ticker["last"] and ticker_rate:
